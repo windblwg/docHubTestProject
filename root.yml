@@ -1,0 +1,4 @@
+# Подключаем верхнеуровневые сущности
+imports:
+  - docHub.yaml
+  - billAPI/root.yml
