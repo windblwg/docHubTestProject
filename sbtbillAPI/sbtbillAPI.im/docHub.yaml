@@ -1,0 +1,27 @@
+imports:
+  # Подключаем архитектурные компоненты
+  - im.msisdnm\dochub.yaml
+
+aspects:
+  sbtbillAPI.im.msisdnm:                     
+    title:  MSISDN Management
+    location: Архитектура/Inventory Management/MSISDN Management   
+  sbtbillAPI.im.simcardm:              
+    title: SIMCARD Management
+    location: Архитектура/Inventory Management/SIMCARD Management
+
+components:
+  sbtbillAPI.im:
+    title: Inventory Management      
+    entity: collections
+    aspects:  
+      - sbtbillAPI.im.msisdnm
+      - sbtbillAPI.im.simcardm
+
+contexts:
+  sbtbillAPI.im:                   
+    title: Поддомены SBTBILLAPI (АС/МС)             
+    location: Обзор SBTBILLAPI     
+    components:  
+      - sbtbillAPI.im.msisdnm
+      - sbtbillAPI.im.simcardm
