@@ -1,0 +1,92 @@
+imports:
+  #- aspects\dochub.yaml
+  - sbtbillAPI.im\dochub.yaml
+  - sbtbillAPI.rm\dochub.yaml
+
+aspects:
+  sbtbillAPI:                     
+    title: SBTBILL API      
+    location: Архитектура    
+  gateway:                   
+    title: SBTBILL API Шлюз      
+    location: Архитектура   
+
+# аспекты домены
+  sbtbillAPI.im:                     
+    title: Inventory Management   
+    location: Архитектура/Inventory Management   
+  sbtbillAPI.cm:                     
+    title: Customer Management     
+    location: Архитектура/Customer Management      
+  sbtbillAPI.tam:                     
+    title: Telco Account Management      
+    location: Архитектура/Telco Account Management     
+  sbtbillAPI.pm:                     
+    title: Product Management     
+    location: Архитектура/Product Management   
+  sbtbillAPI.rm:                     
+    title: Restriction Management  
+    location: Архитектура/Restriction Management
+  sbtbillAPI.paym:                     
+    title: Payment Management    
+    location: Архитектура/Payment Management
+  sbtbillAPI.billm:                     
+    title: Billing Management 
+    location: Архитектура/Billing Management
+  sbtbillAPI.ivm:                     
+    title: Invoice Management  
+    location: Архитектура/Invoice Management
+  sbtbillAPI.acm:                     
+    title: Accounting Management 
+    location: Архитектура/Accounting Management
+  sbtbillAPI.cnm:                     
+    title: Notification Management   
+    location: Архитектура/Notification Management  
+
+components:
+  user:                       
+    title: Пользователь       
+    entity: Invoker             
+    links:                    
+      - id: gateway        
+        direction: <-->       
+        title: Вызов метода   
+
+  sbtbillAPI:
+    title: SBTBILL API      
+    entity: collections
+    aspects:  
+      - sbtbillAPI.im
+      - sbtbillAPI.cm
+      - sbtbillAPI.tam
+      - sbtbillAPI.pm
+      - sbtbillAPI.rm
+      - sbtbillAPI.paym
+      - sbtbillAPI.billm
+      - sbtbillAPI.ivm
+      - sbtbillAPI.acm
+      - sbtbillAPI.cnm
+
+  gateway:                 
+    title: SBTBILL API Шлюз   
+    entity: collections
+    links:                    
+      - id: sbtbillAPI        
+        direction: <-->       
+        title: Вызов метода         
+
+contexts:
+  sbtbillAPI:                   
+    title: Домены SBTBILLAPI              
+    location: Обзор SBTBILLAPI          
+    components:  
+      - sbtbillAPI.im
+    #  - sbtbillAPI.cm
+    #  - sbtbillAPI.tam
+    #  - sbtbillAPI.pm
+      - sbtbillAPI.rm
+    #  - sbtbillAPI.paym
+    #  - sbtbillAPI.billm
+    #  - sbtbillAPI.ivm
+    #  - sbtbillAPI.acm
+    #  - sbtbillAPI.cnm
