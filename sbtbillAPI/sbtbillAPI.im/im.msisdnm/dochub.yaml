@@ -1,1 +1,26 @@
+imports:
+  # Подключаем архитектурные компоненты
+  - msisdnm.getmsisdninfo\dochub.yaml
 
+aspects:
+  sbtbillAPI.im.msisdnm.getmsisdninfo:                     
+    title:  Получение информации о MSISDN
+    location: Архитектура/Inventory Management/MSISDN Management/Получение информации о MSISDN
+  sbtbillAPI.im.msisdnm.getmsisdnhistory:              
+    title: Получение истории MSISDN
+    location: Архитектура/Inventory Management/SIMCARD Management/Получение истории MSISDN
+
+components:
+  sbtbillAPI.im.msisdnm:
+    title: MSISDN Management      
+    entity: collections
+    aspects:  
+      - sbtbillAPI.im.msisdnm.getmsisdninfo
+      - sbtbillAPI.im.msisdnm.getmsisdnhistory
+
+contexts:
+  sbtbillAPI.im.msisdnm:                   
+    title: Методы    
+    location: Обзор SBTBILLAPI          
+    components:  
+      - sbtbillAPI.im.msisdnm.getmsisdninfo
