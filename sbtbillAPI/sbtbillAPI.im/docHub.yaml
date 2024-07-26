@@ -24,4 +24,3 @@ contexts:
     location: Обзор SBTBILLAPI     
     components:  
       - sbtbillAPI.im.msisdnm
-      - sbtbillAPI.im.simcardm
