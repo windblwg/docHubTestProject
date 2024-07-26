@@ -1,3 +1,0 @@
-# Подключаем сущности BillAPI
-imports:
-  - L1.yaml
