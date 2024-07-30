@@ -2,9 +2,11 @@
 imports:
   #- aspects\dochub.yaml
   #- sbtbillAPI.im\root.yaml
-  #- sbtbillAPI.rm\root.yaml
+  - sbtbillAPI.rm\root.yaml
 
 components:
   sbtbillAPI.rm:
     title: Restriction Management      
     entity: collections
+
+    

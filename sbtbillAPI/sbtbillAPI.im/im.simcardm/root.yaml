@@ -1,1 +1,7 @@
-
+components:
+  sbtbillAPI.im.simcardm:
+    title: SIMCARD Management      
+    entity: collections
+    aspects:  
+      - sbtbillAPI.im.msisdnm.getmsisdninfo
+    #  - sbtbillAPI.im.msisdnm.getmsisdnhistory

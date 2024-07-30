@@ -21,7 +21,7 @@ components:
 
 contexts:
   sbtbillAPI.im.msisdnm:                   
-    title: Методы    
+    title: Поддомены SBTBILLAPI (АС/МС)     
     location: Обзор SBTBILLAPI          
     components:  
       - sbtbillAPI.im.msisdnm.getmsisdninfo
