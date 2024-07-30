@@ -1,0 +1,28 @@
+import:
+  - technologies.yaml
+  - api.yaml
+
+components:
+  sbtbillAPI.im.msisdnm.getmsisdninfo:
+    title: Метод получения информации о MSISDN 
+    entity: collections
+    docs: 
+      type: OpenAPI
+      source: api.yaml
+
+docs:
+  msisdnm.getmsisdninfo:
+    location: Метод получения информации о MSISDN 
+    description: Метод получения информации о MSISDN
+    type: OpenAPI
+    source: api.yaml
+    subjects:
+      - sbtbillAPI.im.msisdnm.getmsisdninfo 
+
+  methods1:
+    location: Метод получения информации о MSISDN 2
+    description: Метод получения информации о MSISDN
+    type: markdown
+    source: technologies.md
+    subjects:
+      - sbtbillAPI.im.msisdnm.getmsisdninfo 

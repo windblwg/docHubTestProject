@@ -1,7 +1,7 @@
 imports:
   #- aspects\dochub.yaml
-  - sbtbillAPI.im\dochub.yaml
-  - sbtbillAPI.rm\dochub.yaml
+  - sbtbillAPI.im\root.yaml
+  - sbtbillAPI.rm\root.yaml
 
 aspects:
   sbtbillAPI:                     
@@ -77,8 +77,8 @@ components:
 
 contexts:
   sbtbillAPI:                   
-    title: Домены SBTBILLAPI              
-    location: Обзор SBTBILLAPI          
+    title: Домены SBTBILLAPI     
+    location: Обзор SBTBILLAPI
     components:  
       - sbtbillAPI.im
     #  - sbtbillAPI.cm

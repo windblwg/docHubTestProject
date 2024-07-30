@@ -1,0 +1,5 @@
+
+components:
+  sbtbillAPI.im.msisdnm.getmsisdnhistory:
+    title: Метод получения истории MSISDN 
+    entity: collections

@@ -1,6 +1,7 @@
 imports:
   # Подключаем архитектурные компоненты
-  - im.msisdnm\dochub.yaml
+  - im.msisdnm\root.yaml
+  - im.simcardm\root.yaml
 
 aspects:
   sbtbillAPI.im.msisdnm:                     
@@ -24,3 +25,4 @@ contexts:
     location: Обзор SBTBILLAPI     
     components:  
       - sbtbillAPI.im.msisdnm
+      #- sbtbillAPI.im.simcardm

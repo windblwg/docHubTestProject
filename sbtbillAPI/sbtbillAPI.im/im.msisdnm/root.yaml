@@ -1,6 +1,7 @@
 imports:
   # Подключаем архитектурные компоненты
-  - msisdnm.getmsisdninfo\dochub.yaml
+  - msisdnm.getmsisdninfo\root.yaml
+  - msisdnm.getmsisdnhistory\root.yaml
 
 aspects:
   sbtbillAPI.im.msisdnm.getmsisdninfo:                     
@@ -24,3 +25,4 @@ contexts:
     location: Обзор SBTBILLAPI          
     components:  
       - sbtbillAPI.im.msisdnm.getmsisdninfo
+      - sbtbillAPI.im.msisdnm.getmsisdnhistory

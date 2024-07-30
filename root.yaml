@@ -1,0 +1,34 @@
+imports:
+  - sbtbillAPI\root.yaml #корневой манифест sbtbillAPI
+
+aspects:
+  auth:                       
+    title: Авторизация         
+    location: Авторизация     
+
+components:
+  # Компоненты верхнего уровня (L1 C4Model)
+  user:                       
+    title: Invoker       
+    entity: actor             
+    links:                   
+      - id: system          
+        direction: <-->                # Направление взаимодействия (<-- | -- | --> | <-->)
+        title: Получение токена        
+
+  system:
+    title: Система авторизации
+    entity: collections
+    aspects:                  
+      - auth
+
+# Диаграммы представлений
+contexts:
+  user:                   
+    title: Обзор              
+    location: Обзор          
+    components:   
+      - system            
+      - sbtbillAPI
+      - gateway        
+      - user
