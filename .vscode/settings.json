@@ -2,7 +2,7 @@
     "yaml.schemas": {
         "C:\\Users\\KUVAIS~1\\AppData\\Local\\Temp\\dochub\\schema.json": [
             "*",
-            "vscode-vfs://github/windblwg/docHubTestProject/dochub.yaml"
+            "vscode-vfs://github.com/windblwg/docHubTestProject.git"
         ]
     }
 }
